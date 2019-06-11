@@ -12,11 +12,11 @@ function onAddInfo() {
         processData: false,  // 告诉jQuery不要去处理发送的数据
         contentType: false,   // 告诉jQuery不要去设置Content-Type请求头
         success: function (data) {
-            if (data["Code"] === 0) {
+            if (data["code"] === 0) {
                 $('#result').html("版本信息保存成功！");
-                versionId = data['Data']['versionId'];
+                versionId = data['data']['versionId'];
             } else {
-                $('#result').html("版本信息保存失败:" + data['Msg']);
+                $('#result').html("版本信息保存失败:" + data['msg']);
             }
         },
         error: function (error) {
@@ -46,11 +46,11 @@ function onUpload() {
         contentType: false,   // 告诉jQuery不要去设置Content-Type请求头
 
         success: function (data) {
-            if (data["Code"] === 0) {
+            if (data["code"] === 0) {
                 $('#result').html("APK文件上传成功！");
-                versionId = data['Data']['versionId'];
+                versionId = data['data']['versionId'];
             } else {
-                $('#result').html("APK文件上传失败:" + data['Msg']);
+                $('#result').html("APK文件上传失败:" + data['msg']);
             }
         },
         error: function (error) {

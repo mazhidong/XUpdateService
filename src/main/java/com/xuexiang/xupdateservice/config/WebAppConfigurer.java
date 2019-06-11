@@ -19,7 +19,6 @@ import java.util.List;
  * @author xuexiang
  * @since 2018/8/6 下午5:50
  */
-@EnableWebMvc
 @Configuration
 public class WebAppConfigurer extends WebMvcConfigurerAdapter {
 
